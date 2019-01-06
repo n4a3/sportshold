@@ -1,0 +1,29 @@
+header.page-header
+  section.page-header__top
+    div.content-wrapper
+      nav.nav.nav--info
+        ul.nav__list
+          each val in ['Support', 'Delivery', 'Legal', 'About Us']
+            li.nav__item
+              a.nav__link(href="#")= val
+
+      div.menu
+        ul.menu__list
+          li.menu__item.menu__item--cart
+            a.menu__link(href="#") $465.00 <span>4 Items
+          li.menu__item.menu__item--login
+            a.menu__link(href="#") Login
+          li.menu__item.menu__item--register
+            a.menu__link(href="#") Register
+
+  section.page-header__bottom
+    div.content-wrapper
+      div.logo.page-header__logo
+        img(src="/img/logo.png", alt="")
+      nav.nav.nav--categories
+        ul.nav__list
+          li.nav__item.nav__item--active
+            a.nav__link(href="#") Home
+          each val in ['Men', 'Women', 'Children', 'Baby', 'Our Brands', 'Sales']
+            li.nav__item
+              a.nav__link(href="#")= val

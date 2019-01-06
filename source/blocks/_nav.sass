@@ -1,0 +1,36 @@
+.nav, .menu
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__link
+    display: block
+    padding: 18px 20px
+
+.nav
+  &__item
+    &--active
+      .nav__link
+        color: #ff7270
+        padding-bottom: 14px
+        border-bottom: 4px solid #ff7270
+
+.menu
+  &__item
+    &--cart
+      border-right: 1px solid #5b3a3a
+      span
+        color: #dcc5b8
+      .menu__link
+        position: relative
+        &::before
+          display: block
+          position: absolute
+          left: -10px
+          content: ''
+          background: url(/img/bag.svg) no-repeat center
+          width: 20px
+          height: 20px
+    &--register
+      background-color: #ff7270
+
