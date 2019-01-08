@@ -1,6 +1,6 @@
 header.page-header
   section.page-header__top
-    div.content-wrapper
+    div.content-wrapper.page-header__wrapper
       nav.nav.nav--info
         ul.nav__list
           each val in ['Support', 'Delivery', 'Legal', 'About Us']
@@ -17,7 +17,7 @@ header.page-header
             a.menu__link(href="#") Register
 
   section.page-header__bottom
-    div.content-wrapper
+    div.content-wrapper.page-header__wrapper
       div.logo.page-header__logo
         img(src="/img/logo.png", alt="")
       nav.nav.nav--categories

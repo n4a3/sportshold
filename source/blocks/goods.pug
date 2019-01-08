@@ -1,0 +1,41 @@
+mixin item(priceAfter, priceBefore, sex, name, num)
+  case sex
+    when 'm'
+      - sex = 'Men'
+    when 'w'
+      - sex = 'Women'
+    when 'u'
+      - sex = 'Men / Women'
+  if priceBefore
+    a.goods__item.goods__item_discount(href="#")
+      .goods__price__wrapper
+        p.goods__price.goods__price_after=  '$'+priceAfter+'.00'
+        p.goods__price.goods__price_before=              '$'+priceBefore+'.00'
+        p.goods__discount=                  -((1-priceAfter/priceBefore)*100)+'%'
+      .goods__pic
+        img(src='./img/items/'+num+'.jpg', alt=name)
+      .goods__info
+        p.goods__sex=  sex
+        p.goods__name= name
+        p.goods__num=  '#'+num
+  else
+    a.goods__item(href="#")
+      .goods__price__wrapper
+        p.goods__price= '$'+priceAfter+'.00'
+      .goods__pic
+        img(src='./img/items/'+num+'.jpg', alt=name)
+      .goods__info
+        p.goods__sex=  sex
+        p.goods__name= name
+        p.goods__num=  '#'+num
+
+section.goods
+  div.goods__list
+    +item(45, 60, 'm', 'Converse Breakpoint Suede Blue', '16378271')
+    +item(55, 0, 'u', 'Converse CT All Star II', '16378272')
+    +item(60, 80, 'w', 'Adidas Pure Boost Chill', '16378273')
+    +item(50, 0, 'm', 'Puma Duplex W Casual', '16378274')
+    +item(90, 0, 'm', 'Adidas Alphabounce 1M', '16378275')
+    +item(50, 100, 'm', 'Asics GEL-Epirus', '16378276')
+    +item(40, 0, 'm', 'Adidas Originals Courtvantage Mesh', '16378277')
+    +item(80, 0, 'm', 'Adidas Originals Climacool 1', '16378278')

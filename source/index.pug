@@ -6,9 +6,13 @@ html(lang="en")
     // build:css
     link(rel="stylesheet", href="/css/main.css")
     link(rel="stylesheet", href="/css/blocks/header.css")
+    link(rel="stylesheet", href="/css/blocks/banner.css")
+    link(rel="stylesheet", href="/css/blocks/promo.css")
+    link(rel="stylesheet", href="/css/blocks/shop.css")
     // endbuild
   body
-    svg(style={display: 'none'})
-      include ../build/img/sprite.svg
-    include blocks/header.pug
+    //- svg(style={display: 'none'})
+    //-   include ../build/img/sprite.svg
+    include blocks/header
+    include blocks/main
     

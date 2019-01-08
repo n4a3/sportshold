@@ -11,18 +11,29 @@
   &__item
     transition: 0.2s
     &:hover
-      background-color: #ab5756
+      background-color: #ff7270
       transition: 0.2s
     &--active
       .nav__link
         color: #ff7270
         padding-bottom: 14px
         border-bottom: 4px solid #ff7270
+        transition: 0.2s
+        &:hover
+          color: #ffffff
+          padding-bottom: 14px
+          border-bottom: 4px solid #ffffff
+          transition: 0.2s
 
 .menu
   &__item
+    transition: 0.2s
+    &:hover
+      background-color: #ff7270
+      transition: 0.2s
     &--cart
       border-right: 1px solid #5b3a3a
+      padding-left: 25px;
       span
         color: #dcc5b8
       .menu__link
@@ -35,6 +46,3 @@
           background: url(/img/bag.svg) no-repeat center
           width: 20px
           height: 20px
-    &--register
-      background-color: #ff7270
-

@@ -1,0 +1,68 @@
+.goods
+  position: relative
+  text-align: center
+  &:before
+    display: block
+    content: ''
+    width: 100%
+    padding-top: calc(66% - 2px)
+  &__list
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: grid
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr)
+    grid-gap: 30px
+    text-align: left
+  &__item
+    display: block
+    border: 1px solid #e0dfde
+    padding: 28px
+    position: relative
+    transition: 0.2s
+    &:hover
+      border: 1px solid #ff7270
+      transition: 0.2s
+  
+  &__price
+    margin-top: 0
+    margin-bottom: 50px
+    font-size: 24px
+    line-height: 26px
+    color: #8a8784
+    &_after
+      color: #ff7270
+      margin-bottom: 8px
+    &_before
+      margin-bottom: 16px
+      font-size: 16px
+      line-height: 26px
+      text-decoration: line-through
+  &__discount
+    position: absolute
+    margin: 0
+    color: #ffffff
+    background-color: #ff7270
+    font-weight: 500
+    font-size: 16px
+    line-height: 26px
+    width: 25%
+    text-align: center
+    right: -1px
+    top: 28px
+  &__pic
+    position: relative
+    height: 120px
+    img
+      position: absolute
+      margin: auto
+      width: 100%
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+  &__info
+    position: absolute
+    bottom: 10px
