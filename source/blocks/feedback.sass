@@ -1,0 +1,65 @@
+.feedback
+  background-color: #563535
+  background-image: url('/img/feedback-bg.jpg')
+  background-size: cover
+  max-height: 570px
+  text-align: center
+  color: #ffffff
+  padding: 8% 0
+
+  .customer__list
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 0 20%
+    .customer
+      display: inline-block
+      margin-bottom: 56px
+      width: 33.33%
+      opacity: 0.5
+      transition: 0.2s
+      &__pic
+        border: 3px solid #ffffff
+        border-radius: 50%
+        margin-bottom: 28px
+      &__name
+        display: block
+        font-weight: 500
+      &:hover, &:focus
+        opacity: 1
+        transition: 0.2s
+        outline: none
+      &--active
+        opacity: 1
+
+  .review
+    &__list
+      min-height: 196px
+
+    display: inline-block
+    position: relative
+    background-color: rgba(255, 255, 255, 0.1)
+    padding: 30px
+    line-height: 26px
+    font-weight: 100
+    border-radius: 5px
+    display: none
+    &::before
+      content: ''
+      position: absolute
+      border-left: 20px solid transparent
+      border-right: 20px solid transparent
+      border-bottom: 20px solid rgba(255, 255, 255, 0.1)
+      top: -20px
+      left: calc(50% - 20px)
+    
+    &--active
+      display: inline-block
+    &--1
+      &::before
+        left: calc(30% - 20px)
+    &--2
+
+    &--3
+      &::before
+        left: calc(70% - 20px)

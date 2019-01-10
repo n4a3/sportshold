@@ -1,0 +1,54 @@
+.news
+  text-align: center
+  &__title
+    display: block
+    font-size: 30px
+    color: #623232
+    text-transform: uppercase
+    font-weight: 500
+    margin-bottom: 50px
+  &__list
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+  &__item
+    position: relative
+    width: 31.5%
+    background-color: #623232
+    background-size: cover
+    text-align: left
+    &--1
+      background-image: url('/img/news/news-1.jpg')
+    &--2
+      background-image: url('/img/news/news-2.jpg')
+    &--3
+      background-image: url('/img/news/news-3.jpg')
+    &::before
+      display: block
+      content: ''
+      width: 100%
+      padding-top: 100%
+  &__link
+    display: block
+    position: absolute
+    color: #ffffff
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+  &__wrapper
+    position: absolute
+    width: 80%
+    left: 30px
+    bottom: 20px
+  &__date
+    line-height: 0
+    font-weight: 500
+    text-transform: uppercase
+  &__description
+    line-height: 26px
+    margin: 8px 0
+  &__comments
+    font-size: 13px
+    line-height: 0
+    color: #ff7270

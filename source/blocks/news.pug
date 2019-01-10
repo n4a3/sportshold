@@ -1,0 +1,14 @@
+mixin item(num, date, desc, comm)
+  li.news__item(class="news__item--"+num)
+    a.news__link(href="#")
+      .news__wrapper
+        span.news__date= date
+        p.news__description= desc
+        span.news__comments= comm + ' Comments'
+
+section.news.content-wrapper
+  span.news__title Latests news
+  ul.news__list
+    +item(1, 'DEC 28, 2017', 'Sit amet consectetur adipiscing elit ipsum dolor', '8')
+    +item(2, 'DEC 27, 2017', 'Lorem ipsum dolor sit amet consectetur adipiscing elit', '15')
+    +item(3, 'DEC 24, 2017', 'Lorem ipsum dolor sit amet consectetur ', '24')

@@ -1,3 +1,4 @@
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -9,10 +10,15 @@ html(lang="en")
     link(rel="stylesheet", href="/css/blocks/banner.css")
     link(rel="stylesheet", href="/css/blocks/promo.css")
     link(rel="stylesheet", href="/css/blocks/shop.css")
+    link(rel="stylesheet", href="/css/blocks/feedback.css")
+    link(rel="stylesheet", href="/css/blocks/news.css")
     // endbuild
+    // build:js
+    script(src="/js/blocks/feedback.js" defer)
+    // endbuild
+
   body
     //- svg(style={display: 'none'})
     //-   include ../build/img/sprite.svg
     include blocks/header
     include blocks/main
-    
