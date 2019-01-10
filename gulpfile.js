@@ -44,7 +44,7 @@ gulp.task('html:build', function() {
   .pipe(pug({pretty: true}))
   .pipe(htmlreplace({
     css: './css/main.min.css',
-    js: './js/.min.js',               //https://www.npmjs.com/package/gulp-html-replace
+    js: './js/main.min.js',     // DEFER!! https://www.npmjs.com/package/gulp-html-replace
   }))
   .pipe(gulp.dest('./build'));
 });
@@ -86,6 +86,15 @@ gulp.task('css:build', function() {
 
 gulp.task('js:watch', function() {
   return gulp.src('./source/**/*.js')
+  .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('js:build', function() {
+  return gulp.src('./source/**/*.js')
+  .pipe(concat('main.js'))
+  .pipe(gulp.dest('./build/js'))
+  // UGLIFY
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('./build/js'));
 });
 
@@ -173,7 +182,7 @@ gulp.task('watch', gulp.series(
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel(gulp.series('sprite', 'html:build'), 'css:build', 'assets:build', 'images:build')
+  gulp.parallel(gulp.series('sprite', 'html:build'), 'css:build', 'js:build', 'assets:build', 'images:build')
 ));
 
 gulp.task('default', gulp.series('watch'));

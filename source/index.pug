@@ -12,13 +12,15 @@ html(lang="en")
     link(rel="stylesheet", href="/css/blocks/shop.css")
     link(rel="stylesheet", href="/css/blocks/feedback.css")
     link(rel="stylesheet", href="/css/blocks/news.css")
+    link(rel="stylesheet", href="/css/blocks/footer.css")
     // endbuild
     // build:js
     script(src="/js/blocks/feedback.js" defer)
     // endbuild
 
   body
-    //- svg(style={display: 'none'})
-    //-   include ../build/img/sprite.svg
+    svg(style={display: 'none'})
+      include ../build/img/sprite.svg
     include blocks/header
     include blocks/main
+    include blocks/footer
